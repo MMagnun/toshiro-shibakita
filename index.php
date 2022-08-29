@@ -1,9 +1,12 @@
-<html>
-
-<head>
-<title>Exemplo PHP</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toshiro Shibata PHP</title>
+  </head>
+    <body>
 
 <?php
 ini_set("display_errors", 1);
@@ -24,7 +27,7 @@ $database = "meubanco";
 $link = new mysqli($servername, $username, $password, $database);
 
 /* check connection */
-if (mysqli_connect_errno()) {
+if (mysqli_connect_error()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
